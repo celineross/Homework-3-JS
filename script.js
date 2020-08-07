@@ -59,7 +59,7 @@ function generatePassword() {
 
     //adds special characters to the password
     if (special) {
-        var specialVals = " !#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
+        var specialVals = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
         options += specialVals
         //ensures at least one special character is in the password
         password += getRandomChar(specialVals)
@@ -76,22 +76,7 @@ function generatePassword() {
     passwordDisplay.textContent = password
 }
 
-// var string = options
+//helper function for how to get a random character from each string
 function getRandomChar(string) {
     return string[Math.floor(Math.random() * string.length)]
 }
-
-
-
-/* click generate pw
-prompt length of the password
-    ask for length
-    make sure its between 8 and 128 char
-    reject if less than 8 or more than 128
-confirm prompt option for lowercase
-confirm prompt option for uppercase
-confirm prompt option for numbers
-confirm prompt option for special characters
-
-i
-*/
