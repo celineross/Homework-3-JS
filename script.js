@@ -82,18 +82,6 @@ function getRandomChar(string) {
 }
 
 
-//JSDOC
-/**
- * 
- * @param {Number} x first number
- * @param {Number} y second number
- * @returns {Number} x and y added together
- */
-function Add(x, y) {
-    console.log("hello")
-    return x + y;
-}
-//var sum = Add(4, 6)
 
 /* click generate pw
 prompt length of the password
