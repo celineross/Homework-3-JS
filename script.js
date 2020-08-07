@@ -65,13 +65,14 @@ function generatePassword() {
         password += getRandomChar(specialVals)
     }
 
-    //log the character variables used
+    //log the character strings used
     console.log(options);
 
+    //establish password length entered in relation to characters used, see helper function
     for (var i = password.length; i < pLength; i++) {
         password += getRandomChar(options)
     }
-
+    //display password
     passwordDisplay.textContent = password
 }
 
