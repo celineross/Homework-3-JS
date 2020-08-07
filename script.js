@@ -1,7 +1,7 @@
 var lowercase = "abcdefghijklmnopqrstuvwxyz";
 var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numbers = "1234567890";
-var specialCharacters = " !#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
+var special = " !#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
 
 var generateButton = document.getElementById("generate");
 
@@ -9,11 +9,15 @@ var generateButton = document.getElementById("generate");
 generateButton.addEventListener("click", function() {
     var pLength = prompt("How many characters would you like?"); 
     if (pLength < 8 || pLength > 128) {
-        alert("Please enter a value between 8 and 128 characters.")
+        alert("Please enter a value between 8 and 128 characters.");
     } else {
-        alert("You have chosen " + pLength + " characters. Press OK to continue.")
+        var lowercase = confirm("Would you like to include lowercase letters?");
+        var uppercase = confirm("Would you like to include uppercase letters?");
+        var numbers = confirm("Would you like to include numbers?");
+        var special = confirm("Would you like to include special characters?");
     }
-})
+}
+);
 
 /* click generate pw
 prompt length of the password
