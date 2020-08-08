@@ -9,3 +9,4 @@
     * special characters
 * allows password to be generated only if at least one of the character classes is selected
 * the password is generated and printed into the password box
+

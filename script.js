@@ -11,11 +11,11 @@ function generatePassword() {
     //convert pLength to a numerical variable
     var pLength = parseInt(prompt("How many characters would you like?"));
 
-    //establish min/max for password length
-    if (pLength < 8 || pLength > 128) {
+    //establish min/max for password length, reject empty field or string
+    if (pLength < 8 || pLength > 128 || !pLength) {
         alert("Please enter a value between 8 and 128 characters.");
         return;
-    }
+    } 
 
     //confirm prompts for including different character classes
     var lowercase = confirm("Would you like to include lowercase letters?");
@@ -60,9 +60,9 @@ function generatePassword() {
     //adds special characters to the password
     if (special) {
         var specialVals = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
-        options += specialVals
+        options += specialVals;
         //ensures at least one special character is in the password
-        password += getRandomChar(specialVals)
+        password += getRandomChar(specialVals);
     }
 
     //log the character strings used
@@ -70,13 +70,13 @@ function generatePassword() {
 
     //establish password length entered in relation to characters used, see helper function
     for (var i = password.length; i < pLength; i++) {
-        password += getRandomChar(options)
+        password += getRandomChar(options);
     }
     //display password
-    passwordDisplay.textContent = password
+    passwordDisplay.textContent = password;
 }
 
-//helper function for how to get a random character from each string
+//helper function, how to get a random character from each string
 function getRandomChar(string) {
-    return string[Math.floor(Math.random() * string.length)]
+    return string[Math.floor(Math.random() * string.length)];
 }
